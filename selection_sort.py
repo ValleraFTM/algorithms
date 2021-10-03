@@ -6,13 +6,12 @@ start_time = time.monotonic()
 
 A = [randint(0, 1000) for x in range(10000)]
 
-for j in range(len(A)):
-    key = A[j]
-    i = j - 1
-    while i >= 0 and A[i] > key :
-        A[i+1] = A[i]
-        i -= 1
-        A[i+1] = key
+for i in range(0, len(A) - 1):
+    smallest = i
+    for j in range(i + 1, len(A)-1):
+        if A[j] < A[smallest]:
+            smallest = j
+    A[i], A[smallest] = A[smallest], A[i]
 
 
 end_time = time.monotonic()

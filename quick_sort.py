@@ -18,8 +18,19 @@ def quick_sort(A):
         return quick_sort(less) + [pivot] + quick_sort(greater)
     
 
+def random_quick_sort(A):
+    if len(A) < 2:
+        return A
+    else:
+        pivot = A[randint(0, len(A))]
+        less = [i for i in A if i <= pivot]
+        greater = [i for i in A if i > pivot]
+        
+        return quick_sort(less) + [pivot] + quick_sort(greater)
 
 quick_sort(A)
+random_quick_sort(A)
+
 
 end_time = time.monotonic()
 print(timedelta(seconds=end_time - start_time))

@@ -38,6 +38,7 @@ class SingleLinkedList:
         self.tail = item
 
         return
+
     def add_list_item_by_id(self, item, item_id):
 
         if item_id > self.list_length():
@@ -64,7 +65,6 @@ class SingleLinkedList:
                         return
                     previous_node = current_node
                     current_node = current_node.next
-                    
                     current_id += 1
         return
 
@@ -78,7 +78,6 @@ class SingleLinkedList:
         while current_node is not None:
             count += 1
             current_node = current_node.next
-            
         return count
 
     def output_list(self):
@@ -87,7 +86,6 @@ class SingleLinkedList:
         while current_node is not None:
             print(current_node.data)
             current_node = current_node.next
-
         return
 
     def unordered_search(self, value):

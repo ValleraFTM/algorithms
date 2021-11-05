@@ -3,7 +3,6 @@ class ListNode:
     def __init__(self, data):
         self.data = data
         self.next = None
-        self.previous = None
         return
 
     def has_value(self, value):
@@ -12,9 +11,7 @@ class ListNode:
         else:
             return False
 
-node1 = ListNode(15)
-node2 = ListNode(8.2)
-node3 = ListNode('berlin')
+
 
 class SingleLinkedList:
     def __init__(self):

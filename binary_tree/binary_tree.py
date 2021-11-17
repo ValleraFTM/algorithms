@@ -24,19 +24,21 @@ def in_order(node):
         print(node.value)
         post_order(node.right)
 
+
 tree = TreeNode(1)
 tree.left = TreeNode(2)
 tree.right = TreeNode(3)
 tree.left.left = TreeNode(4)
 tree.left.right = TreeNode(5)
 
-pre_order(tree)
-print()
-print()
-post_order(tree)
-print()
-print()
-in_order(tree)
+if __name__ == "__main__":
+    pre_order(tree)
+    print()
+    print()
+    post_order(tree)
+    print()
+    print()
+i   n_order(tree)
 
         
         

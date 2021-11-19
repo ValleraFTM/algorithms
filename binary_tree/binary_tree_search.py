@@ -13,8 +13,7 @@ class Binary_tree_search:
     def __init__(self):
         self.root = None
         self.leaf = None
-        
-
+ 
     def add_node(self, node):
         
         if not isinstance(node, Tree_node):
@@ -48,9 +47,17 @@ class Binary_tree_search:
                         current_node.right = is_node
                         print(is_node.value, 'right')
                         return
-            
-    def print_tree(self):
-        print(root.value)
+
+def minimal_value(node):
+    while node.left is not None:
+        node = node.left
+    return node.value
+
+def maximal_value(node):
+    while node.right is not None:
+        node = node.right
+    return node.value
+        
 
 def pre_order(node):
     if node:
@@ -69,5 +76,6 @@ print(A)
 for x in A:
     tree.add_node(x)
 
-pre_order(tree.root)
 
+print(minimal_value(tree.root))
+print(maximal_value(tree.root))
